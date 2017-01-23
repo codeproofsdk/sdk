@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://www.codeproof.com/webservice/public/v1/CodeproofService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" />
+  <xs:element name="GetCPIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="AuthObj" nillable="true" type="q1:Authenticate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCPIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="GetCPIDsResult" nillable="true" type="q2:ArrayOfCPID" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeviceProperty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="AuthObj" nillable="true" type="q3:Authenticate" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="cpid" nillable="true" type="q4:CPID" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevicePropertyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="GetDevicePropertyResult" nillable="true" type="q5:DeviceProperty" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
