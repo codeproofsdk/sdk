@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://www.codeproof.com/webservice/public/v1/CodeproofService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" />
+  <xs:element name="GetCPIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="AuthObj" nillable="true" type="q1:Authenticate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCPIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="GetCPIDsResult" nillable="true" type="q2:ArrayOfCPID" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeviceProperty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="AuthObj" nillable="true" type="q3:Authenticate" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="cpid" nillable="true" type="q4:CPID" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevicePropertyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="GetDevicePropertyResult" nillable="true" type="q5:DeviceProperty" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteCommand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="AuthObj" nillable="true" type="q6:Authenticate" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="cpid" nillable="true" type="q7:CPID" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="cmdObj" nillable="true" type="q8:CommandRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteCommandResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="ExecuteCommandResult" nillable="true" type="q9:CommandRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteCommandGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="AuthObj" nillable="true" type="q10:Authenticate" />
+        <xs:element minOccurs="0" name="nodename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="cmdObj" nillable="true" type="q11:CommandRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteCommandGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="ExecuteCommandGroupResult" nillable="true" type="q12:CommandRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPolicy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="AuthObj" nillable="true" type="q13:Authenticate" />
+        <xs:element minOccurs="0" name="nodename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="category" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPolicyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPolicyResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingDevice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="AuthObj" nillable="true" type="q14:Authenticate" />
+        <xs:element minOccurs="0" name="nodeid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingDeviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PingDeviceResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSoftwares">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="AuthObj" nillable="true" type="q15:Authenticate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSoftwaresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="GetSoftwaresResult" nillable="true" type="q16:ArrayOfSoftware" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSoftware">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="AuthObj" nillable="true" type="q17:Authenticate" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="publisher" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="os" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pkgurl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pkgtype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deploy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSoftwareResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddSoftwareResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSoftware">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" minOccurs="0" name="AuthObj" nillable="true" type="q18:Authenticate" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="publisher" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="os" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pkgurl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pkgtype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deploy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSoftwareResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSoftwareResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSoftware">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSoftwareResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSoftwareResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

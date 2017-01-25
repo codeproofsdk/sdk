@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Codeproof.External.Webservice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Authenticate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apikey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="custid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Authenticate" nillable="true" type="tns:Authenticate" />
+  <xs:complexType name="ArrayOfCPID">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CPID" nillable="true" type="tns:CPID" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCPID" nillable="true" type="tns:ArrayOfCPID" />
+  <xs:complexType name="CPID">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cpid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="deviceid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="devicetype" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CPID" nillable="true" type="tns:CPID" />
+  <xs:complexType name="DeviceProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BatteryLife" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeviceInformations" nillable="true" type="tns:ArrayOfNameValue" />
+      <xs:element minOccurs="0" name="DeviceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExternalStorageFree" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExternalStorageUsed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Infections" nillable="true" type="tns:ArrayOfInfection" />
+      <xs:element minOccurs="0" name="InstalledApplications" nillable="true" type="tns:ArrayOfApp" />
+      <xs:element minOccurs="0" name="InstalledPolicies" nillable="true" type="tns:ArrayOfNameValue" />
+      <xs:element minOccurs="0" name="InstalledProfiles" nillable="true" type="tns:ArrayOfProfile" />
+      <xs:element minOccurs="0" name="InternalStorageFree" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InternalStorageUsed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastCheckinTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MemoryFree" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MemoryUsed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OSName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OSVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RunningApplications" nillable="true" type="tns:ArrayOfApp" />
+      <xs:element minOccurs="0" name="RunningProcess" nillable="true" type="tns:ArrayOfProcess" />
+      <xs:element minOccurs="0" name="RunningServices" nillable="true" type="tns:ArrayOfApp" />
+      <xs:element minOccurs="0" name="ScreenlockStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceProperty" nillable="true" type="tns:DeviceProperty" />
+  <xs:complexType name="ArrayOfNameValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NameValue" nillable="true" type="tns:NameValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNameValue" nillable="true" type="tns:ArrayOfNameValue" />
+  <xs:complexType name="NameValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NameValue" nillable="true" type="tns:NameValue" />
+  <xs:complexType name="ArrayOfInfection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Infection" nillable="true" type="tns:Infection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInfection" nillable="true" type="tns:ArrayOfInfection" />
+  <xs:complexType name="Infection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActionTaken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportedTime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Infection" nillable="true" type="tns:Infection" />
+  <xs:complexType name="ArrayOfApp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="App" nillable="true" type="tns:App" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApp" nillable="true" type="tns:ArrayOfApp" />
+  <xs:complexType name="App">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportedTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceDir" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="App" nillable="true" type="tns:App" />
+  <xs:complexType name="ArrayOfProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Profile" nillable="true" type="tns:Profile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfile" nillable="true" type="tns:ArrayOfProfile" />
+  <xs:complexType name="Profile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HasRemovalPasscode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsEncrypted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsManaged" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayloadDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayloadDisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayloadIdentifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayloadOrganization" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayloadRemovalDisallowed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayloadUUID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayloadVersion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Profile" nillable="true" type="tns:Profile" />
+  <xs:complexType name="ArrayOfProcess">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Process" nillable="true" type="tns:Process" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProcess" nillable="true" type="tns:ArrayOfProcess" />
+  <xs:complexType name="Process">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcessStartedAt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportedTime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Process" nillable="true" type="tns:Process" />
+  <xs:complexType name="CommandRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Command" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommandId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommandName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedUserId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Param1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Param2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommandRecord" nillable="true" type="tns:CommandRecord" />
+  <xs:complexType name="ArrayOfSoftware">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Software" nillable="true" type="tns:Software" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSoftware" nillable="true" type="tns:ArrayOfSoftware" />
+  <xs:complexType name="Software">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Deploy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PkgType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PkgUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Publisher" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Software" nillable="true" type="tns:Software" />
+</xs:schema>
