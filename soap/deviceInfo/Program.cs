@@ -25,7 +25,7 @@ namespace CodeproofSDKSample
             Authenticate AuthObj = new Authenticate();
 
             AuthObj.userid = "--your account login email goes here--";
-            AuthObj.apikey = "--your API key goes here--"; //API key is available here at https://www.codeproof.com/Console  
+            AuthObj.apikey = "--your API key goes here--"; //API key is available here at "https://www.codeproof.com/console/Account/Login?ReturnUrl=/console/MyAccount/Index" 
 
             CodeproofServiceClient cpservice = new CodeproofServiceClient();
 
