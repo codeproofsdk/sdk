@@ -1,6 +1,6 @@
 # sdk samples
 
-This git repository contains following .NET sample source codes
+This git repository contains following .NET sample source codes which demostrates how to use Codeproof Mobil Device Management(MDM) API. 
  
 1. deviceInfo - This console based sample reads the device information from the cloud.
 
