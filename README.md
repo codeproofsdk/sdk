@@ -13,3 +13,16 @@ This git repository contains following .NET sample source codes which demostrate
 5. iosKiosk - This console based sample shows how to enable single app/kiosk mode programmatically
 
 5. iosKioskAppInstall - This console based sample shows how to install & update app during single app/kiosk mode programmatically
+
+
+# PHP Sample
+
+php client sample shows to how to send MDM commands programmatically
+
+
+# Android Sample
+
+Android sample code shows how to access "App config data" in the device sent as part of app installation. 
+
+
+
