@@ -1,5 +1,4 @@
-# sdk
-sdk samples
+# sdk samples
 
 This git repository contains following .NET sample source codes
  
