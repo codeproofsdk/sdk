@@ -21,7 +21,7 @@ $client = new SoapClient($wsdl, $soap_options);
 
 $authparam = new StdClass();
 $authparam->userid = 'Enter your codeproof account-email';
-$authparam->apikey = 'Enter API key';
+$authparam->apikey = 'Enter API key'; /*** API key can be obtained from Cloud Console here https://www.codeproof.com/console/Account/Login?ReturnUrl=/console/MyAccount/Index  ***/ 
 
 
 /* Invoke webservice method with auth obj, in this case: GetCPIDs */
@@ -37,14 +37,16 @@ $numdevices = count($resultarray);
 
 /*  setup CommandRecord Object. Only first field "Command" is required..rest all can be empty  */
 $cmdparam = new StdClass();	
-$cmdparam->Command = 'screenlock'; 
-$cmdparam->CommandName = 'SDK screen lock command';
+$cmdparam->Command = 'sendmessage';  
+/** List of commands are screenlock, datawipe, clearpasscode, sendscream, sendmessage, reboot, poweroff, startapp, wipeappdata ***/ 
+ 
+$cmdparam->CommandName = 'SDK send message command';
 $cmdparam->AgentId = '';
 $cmdparam->CommandId = '';
 $cmdparam->CreatedOn = '';
 $cmdparam->CreatedUserId = '';
 $cmdparam->Notes = '';
-$cmdparam->Param1 = '';
+$cmdparam->Param1 = 'Test Message'; /*** parameter changes based on the command ***/
 $cmdparam->Param2 = '';
 $cmdparam->ProductId = '';
 $cmdparam->Result = '';
@@ -54,7 +56,7 @@ $cmdparam->UpdatedOn = '';
 	
 /********** 
 
-NOTE: In this sample code, We are locking all the devices in this account. 
+NOTE: In this sample code, We are sending a push messages to all the devices in the account. 
 
 Make sure to check deviceid (UDID in case of iOS) in the cpid object to target particular device 
 
