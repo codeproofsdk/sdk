@@ -24,7 +24,7 @@ public class PolicyManager {
 		mcontext = ctx;
 	}
 
-	public String appConfigData() {
+	public String getAppConfigData() {
 
 		Log.i(LOG_TAG, "Getting App Policy from Codeproof MDM content provider");
 
@@ -48,7 +48,7 @@ public class PolicyManager {
 	
 		
 	//
-	// Content provider helper.
+	// Content provider helper - Helpers.
 	//
 	
 	public static String GetPolicyStringProvider(Context context, String Name) {
