@@ -15,9 +15,9 @@ This git repository contains following .NET sample source codes which demostrate
 5. iosKioskAppInstall - This console based sample shows how to install & update app during single app/kiosk mode programmatically
 
 
-.NET Webservice WSDL: https://www.codeproof.com/webservice/public/v1/CodeproofService.svc?singleWsdl
+.NET Webservice WSDL: https://webservice.codeproof.com/public/v1/CodeproofService.svc?singleWsdl
 
-API documentation: https://www.codeproof.com/downloads/sdk/docs/CodeproofSDKDocumentation.pdf 
+API documentation: https://s3.amazonaws.com/storage.codeproof.com/downloads/sdk/Codeproof-SDK-Doc.pdf  
 
 
 # PHP Sample
